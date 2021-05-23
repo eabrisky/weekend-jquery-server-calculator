@@ -43,7 +43,8 @@ function handleEquals(){
 } // end handleEquals fn
 
 function handleClear(){
-    
+    $('#inputOne').val('');
+    $('#inputTwo').val('');
 } // end handleClear fn
 
 
@@ -53,24 +54,34 @@ function getNumbers(){
         method: 'GET',
         url: '/numbers'
     }).then(function (response){
+        $('#inputOne').empty();
+        $('#inputTwo').empty();
         console.log(response);
+        for(let operation of response){
+            $('#numList').append(`
+            <li>
+                ${operation.numberOne} ${operation.operator} ${operation.numberTwo} = ${operation.answer}
+            </li>
+        `)
+            $('#answerText').text(`${operation.answer}`)
+        }
     })
 } // end getNumbers fn
 
 
 
 function handlePlus(){
-    operator = 'plus';
+    operator = '+';
 } // end handlePlus fn
 
 function handleMinus(){
-    operator = 'minus';
+    operator = '-';
 } // end handleMinus fn
 
 function handleDivide(){
-    operator = 'divide';
+    operator = '/';
 } // end handleDivide fn
 
 function handleMultiply(){
-    operator = 'multiply';
+    operator = '*';
 } // end handleMultiply fn

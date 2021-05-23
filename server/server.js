@@ -24,21 +24,22 @@ app.post('/numbers', (req, res) => {
 
 function handleMath(mathStuff){
   for (let math of mathStuff){
-    console.log(math);
-    if(math.operator == 'plus'){
+    // console.log(math);
+    if(math.operator == '+'){
       let plusAnswer = Number(math.numberOne) + Number(math.numberTwo);
-      console.log(plusAnswer);
+      // console.log(plusAnswer);
       math.answer = plusAnswer;
-    } else if (math.operator == 'minus'){
+    } else if (math.operator == '-'){
       let minusAnswer = Number(math.numberOne) - Number(math.numberTwo);
-      console.log(minusAnswer);
+      // console.log(minusAnswer);
       math.answer = minusAnswer;
-    } else if (math.operator == 'divide'){
+    } else if (math.operator == '/'){
       let divideAnswer = Number(math.numberOne) / Number(math.numberTwo);
-      console.log(divideAnswer);
+      // console.log(divideAnswer);
       math.answer = divideAnswer;
-    } else if (math.operator == 'multiply'){
+    } else if (math.operator == '*'){
       let multiplyAnswer = Number(math.numberOne) * Number(math.numberTwo);
+      // console.log(multiplyAnswer);
       math.answer = multiplyAnswer;
     }
   } // end LOOP
