@@ -29,8 +29,6 @@ function handleEquals(){
         operator: operator,
         numberTwo: $('#inputTwo').val()
     };
-    // $('#inputOne').push
-    // $('#inputTwo').push
     
     $.ajax({
         method: 'POST',
