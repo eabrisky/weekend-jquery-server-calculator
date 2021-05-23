@@ -59,17 +59,17 @@ function getNumbers(){
 
 
 function handlePlus(){
-    operator = '+';
+    operator = 'plus';
 } // end handlePlus fn
 
 function handleMinus(){
-
+    operator = 'minus';
 } // end handleMinus fn
 
 function handleDivide(){
-
+    operator = 'divide';
 } // end handleDivide fn
 
 function handleMultiply(){
-
+    operator = 'multiply';
 } // end handleMultiply fn

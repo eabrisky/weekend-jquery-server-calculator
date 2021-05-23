@@ -25,7 +25,18 @@ app.post('/numbers', (req, res) => {
 function handleMath(mathStuff){
   for (let math of mathStuff){
     console.log(math);
-    
+    if(math.operator == 'plus'){
+      let plusAnswer = Number(math.numberOne) + Number(math.numberTwo);
+      console.log(plusAnswer);
+    } else if (math.operator == 'minus'){
+      let minusAnswer = Number(math.numberOne) - Number(math.numberTwo);
+      console.log(minusAnswer);
+    } else if (math.operator == 'divide'){
+      let divideAnswer = Number(math.numberOne) / Number(math.numberTwo);
+      console.log(divideAnswer);
+    } else if (math.operator == 'multiply'){
+      let multiplyAnswer = Number(math.numberOne) * Number(math.numberTwo);
+    }console.log(multiplyAnswer);
   } // end LOOP
 } // end handleMath fn
 
