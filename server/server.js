@@ -28,15 +28,19 @@ function handleMath(mathStuff){
     if(math.operator == 'plus'){
       let plusAnswer = Number(math.numberOne) + Number(math.numberTwo);
       console.log(plusAnswer);
+      math.answer = plusAnswer;
     } else if (math.operator == 'minus'){
       let minusAnswer = Number(math.numberOne) - Number(math.numberTwo);
       console.log(minusAnswer);
+      math.answer = minusAnswer;
     } else if (math.operator == 'divide'){
       let divideAnswer = Number(math.numberOne) / Number(math.numberTwo);
       console.log(divideAnswer);
+      math.answer = divideAnswer;
     } else if (math.operator == 'multiply'){
       let multiplyAnswer = Number(math.numberOne) * Number(math.numberTwo);
-    }console.log(multiplyAnswer);
+      math.answer = multiplyAnswer;
+    }
   } // end LOOP
 } // end handleMath fn
 

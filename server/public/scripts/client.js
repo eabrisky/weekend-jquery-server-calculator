@@ -58,6 +58,7 @@ function getNumbers(){
 } // end getNumbers fn
 
 
+
 function handlePlus(){
     operator = 'plus';
 } // end handlePlus fn
