@@ -12,3 +12,10 @@ app.use(express.static('server/public'));
 app.listen(PORT, () => {
     console.log ('Server is running on port', PORT)
   })
+
+app.post('/numbers', (req, res) => {
+  console.log(req.body);
+  
+  // send back a good response
+  res.sendStatus(201);
+})
