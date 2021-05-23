@@ -54,8 +54,8 @@ function getNumbers(){
         method: 'GET',
         url: '/numbers'
     }).then(function (response){
-        $('#inputOne').empty();
-        $('#inputTwo').empty();
+        $('#inputOne').val('');
+        $('#inputTwo').val('');
         console.log(response);
         for(let operation of response){
             $('#numList').append(`
