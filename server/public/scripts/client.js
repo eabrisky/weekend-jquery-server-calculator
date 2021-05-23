@@ -13,9 +13,11 @@ function readyNow () {
 
     $('#equalsBtn').on('click', handleEquals);
     $('#clearBtn').on('click', handleClear);
+
+    getNumbers();
 } // end readyNow
 
-// let submittedNumbers = [];
+
 let operator;
 
 function handleEquals(){
@@ -34,12 +36,27 @@ function handleEquals(){
         method: 'POST',
         url: '/numbers',
         data: submittedNumbers
+    }).then(function (response){
+        console.log(response);
+        getNumbers();
     })
 } // end handleEquals fn
 
 function handleClear(){
     
 } // end handleClear fn
+
+
+
+function getNumbers(){
+    $.ajax({
+        method: 'GET',
+        url: '/numbers'
+    }).then(function (response){
+        console.log(response);
+    })
+} // end getNumbers fn
+
 
 function handlePlus(){
     operator = '+';
